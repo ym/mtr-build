@@ -4,7 +4,7 @@ checkout:
     - git submodule update --init
 test:
   override:
-    - cd mtr && ./bootstrap.sh && ./configure && make
+    - cd mtr && ./bootstrap.sh && ./configure --without-gtk && make
 general:
   artifacts:
     - "mtr/mtr"
