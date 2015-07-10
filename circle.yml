@@ -1,0 +1,10 @@
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+test:
+  override:
+    - cd mtr && ./bootstrap.sh && ./configure && make
+general:
+  artifacts:
+    - "mtr/mtr"
